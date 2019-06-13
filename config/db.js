@@ -9,7 +9,7 @@ const sequelize = new Sequelize(
     keys.mysql.pass,
     {
         host: keys.mysql.host,
-        dialect: 'mysql'
+        dialect: keys.mysql.dialect
     }
 );
 
