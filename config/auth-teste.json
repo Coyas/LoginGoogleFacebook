@@ -1,0 +1,29 @@
+{
+    "google":
+    {
+        "client_id":"",
+        "project_id":"",
+        "auth_uri":"",
+        "token_uri":"",
+        "auth_provider_x509_cert_url":"",
+        "client_secret":"",
+        "redirect_uris":[""],
+        "javascript_origins":[""]
+    },
+    "facebook":
+    {
+        "teste": "teste de facebook credentials"
+    },
+    "mysql":
+    {
+        "db": "",
+        "user": "root",
+        "pass": "",
+        "host": "localhost",
+        "cookieKey": ""
+    },
+    "logar":
+    {
+        "secreta": ""
+    }
+}
