@@ -20,7 +20,7 @@
         "user": "root",
         "pass": "",
         "host": "localhost",
-        "cookieKey": ""
+        "dialect": "mysql"
     },
     "logar":
     {
