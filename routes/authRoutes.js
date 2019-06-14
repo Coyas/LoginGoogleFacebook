@@ -14,17 +14,25 @@ router.get('/logout', (req, res) => {
 })
 
 //auth with google
-router.get('/google', passport.authenticate('google', {
-    scope: ['profile'] //separa infoemacao por virgulas ['profile', 'email']
-})) 
+// router.get('/google', passport.authenticate('google', {
+//     scope: ['profile'] //separa infoemacao por virgulas ['profile', 'email']
+// })) 
 
-//callback de redirecionamento do google
-router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
+// //callback de redirecionamento do google
+// router.get('/google/redirect', passport.authenticate('google'), (req, res) => {
     
-    // res.send('user logado foi: '+req.user.googleId)
-    res.redirect('/profile/')
-})
+//     // res.send('user logado foi: '+req.user.googleId)
+//     res.redirect('/profile/')
+// })
 
 //auth with facebook
+router.get('/facebook', passport.authenticate('facebook'));
+
+router.get('/facebook/callback',
+  passport.authenticate('facebook', { failureRedirect: '/login' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/user');
+}); 
 
 module.exports = router

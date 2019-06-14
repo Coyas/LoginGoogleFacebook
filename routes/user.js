@@ -11,8 +11,8 @@ const authCheck = (req, res, next) => {
 }
 
 router.get('/', authCheck, (req, res) => {
-    // res.send('estas logado, teu profile: '+ req.user.username)
-    res.render('user', {User: req.user})
+    res.send('estas logado, teu profile: '+ req.user.username)
+    // res.render('user', {User: req.user})
 })
 
 

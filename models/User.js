@@ -5,7 +5,7 @@ const User = sequelize.define('users',{
     username: {
         type: Sequelize.STRING
     },
-    googleId: {
+    facebookId: {
         type: Sequelize.STRING
     }
 })
